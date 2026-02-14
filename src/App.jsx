@@ -10,8 +10,8 @@ import Blogs from './components/Blogs.jsx';
 import GetInTouch from './components/GetInTouch.jsx';
 
 
-import Resources from './components/resources.jsx';
-import Services from './components/services.jsx';
+import Resources from './components/Resources.jsx';
+import Services from './components/Services.jsx';
 import TechMobileVan from './components/TechMobileVan.jsx';
 
 import Navbar from './components/Navbar.jsx';
