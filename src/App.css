@@ -1,0 +1,152 @@
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+}
+
+.marquee-content {
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.left-scroll {
+    animation: marquee 40s linear infinite;
+}
+
+.right-scroll {
+    animation: marquee 40s linear infinite reverse;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;
+}
+
+/* Navbar Dropdown Styles */
+.dropdown-container {
+    position: relative;
+}
+
+.dropdown-arrow {
+    font-size: 0.6em;
+    color: #28a745;
+    /* Green color match */
+    transition: transform 0.3s ease;
+}
+
+
+
+.dropdown-menu-custom {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: #ffffff;
+    /* White background */
+    padding: 10px 0;
+    list-style: none;
+    border-radius: 4px;
+    min-width: 180px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.dropdown-menu-custom::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+}
+
+.dropdown-container:hover .dropdown-menu-custom {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.dropdown-item-custom {
+    display: block;
+    padding: 8px 20px;
+    color: #0A1F79;
+    /* Deep blue text */
+    text-decoration: none;
+    font-size: 0.85rem;
+    /* Reduced size */
+    transition: background-color 0.2s, color 0.2s;
+    white-space: nowrap;
+    /* Ensure single line */
+}
+
+.dropdown-item-custom:hover {
+    background-color: #f8f9fa;
+    /* Light hover bg */
+    color: #28a745;
+    /* Green text on hover */
+}
+
+/* Contact Page Styles */
+.btn-contact-submit {
+    background-color: #212529;
+    /* Dark default */
+    color: white;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.btn-contact-submit:hover {
+    background-color: #28a745 !important;
+    /* Green on hover */
+    transform: translateY(-2px);
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+/* Get In Touch Button */
+.btn-get-in-touch {
+    background-color: #0a1f79;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.btn-get-in-touch:hover {
+    background-color: #6cbd45 !important;
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(108, 189, 69, 0.3);
+}

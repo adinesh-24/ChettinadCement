@@ -1,0 +1,184 @@
+.get-in-touch-container {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-color: #f7f9fc; /* Light background */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+/* Background Pattern (Subtle dots/grid if needed, but plain for now based on geometric focus) */
+
+/* Text Section */
+.text-section {
+  z-index: 2;
+  position: relative;
+}
+
+.page-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 0.5rem;
+}
+
+.breadcrumb-nav {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #555;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.breadcrumb-arrow {
+  color: #999;
+  font-weight: bold;
+}
+
+.company-name {
+  color: #333;
+}
+
+.page-name {
+  color: #777;
+}
+
+/* Geometric Shapes */
+.shape-container {
+  position: absolute;
+  top: 0;
+  right: 25%; /* Adjust based on image */
+  bottom: 0;
+  width: 400px; /* Adjust width */
+  pointer-events: none;
+}
+
+/* Blue Chevron/Arrow Shape */
+.shape-blue {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #0f1d5e; /* Navy Blue */
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 80% 100%, 0% 100%);
+  transform: skewX(-30deg); 
+  /* The image shows a chevron type shape. Let's try to match the "Arrow" look */
+  /* Re-evaluating based on "Blue top, Green bottom, arrow pointing right" look */
+}
+
+/* Actually, looking at the description: "Blue top, Green bottom" making an arrow */
+/* Let's try absolute positioning with specific arrow-like clip-paths */
+
+.geometric-shapes {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 35%; /* Mid-ish screen */
+  width: 300px;
+  height: 100%;
+}
+
+.blue-shape {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: #001f5f; /* Deep Navy */
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 55% 100%); 
+  /* This creates a trapezoid. 
+     Top left (0,0) -> Top Right (100,0) -> Bottom Right(100,100) -> Bottom Mid(55,100) 
+  */
+  z-index: 1;
+}
+
+/* Correction for the "Arrow head" look */
+/* 
+   The shape looks like a big arrow pointing right.
+   Top half is blue, Bottom half is green.
+   There is a small triangle overlap.
+*/
+
+.arrow-blue {
+    position: absolute;
+    top: 0;
+    left: 40%; /* Position horizontally */
+    width: 300px; 
+    height: 50%;
+    background-color: #0d1e57;
+    /* Shape: Rect on right, angled on left? No, looks like > shape */
+    /* Let's use the transform approach for cleaner diagonals */
+    transform: skewX(-40deg);
+    transform-origin: bottom left;
+    z-index: 1;
+}
+
+/* Let's stick to the previous plan's shapes which seemed specific */
+/* But I'll refine them for standard CSS */
+
+.decoration-arrow-top {
+    position: absolute;
+    top: 0;
+    left: 45%; 
+    width: 200px;
+    height: 50%;
+    background-color: #0b1c61; /* Navy */
+    transform: skewX(-45deg);
+    z-index: 1;
+}
+
+.decoration-arrow-bottom {
+    position: absolute;
+    bottom: 0;
+    left: 45%;
+    width: 200px;
+    height: 50%;
+    background-color: #5cb85c; /* Green */
+    transform: skewX(45deg);
+    z-index: 1;
+}
+
+/* The Triangle Intersection */
+.decoration-triangle {
+    position: absolute;
+    top: 50%;
+    left: 45%; /* Needs to align with the others */
+    transform: translate(-50%, -50%);
+    width: 0; 
+    height: 0; 
+    border-top: 50px solid transparent;
+    border-bottom: 50px solid transparent;
+    border-right: 50px solid #7a88a8; /* Greyish blue */
+    z-index: 2;
+    display: none; /* Might be hard to align perfectly without trial, hiding for safety unless confident */
+}
+
+/* Support Image */
+.support-image-container {
+    position: absolute;
+    right: 5%;
+    bottom: 0;
+    height: 90%;
+    z-index: 2;
+}
+
+.support-image {
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Background diagonal gray/white split */
+.bg-diagonal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    background: #f4f4f4; /* Slightly darker white */
+    clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 0;
+}

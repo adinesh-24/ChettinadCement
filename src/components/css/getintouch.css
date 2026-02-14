@@ -1,0 +1,35 @@
+.arrow-container {
+  position: absolute;
+  inset: 0;
+}
+
+.navy-wing {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  height: 50%;
+  width: 40%;
+  background: #001b69;
+  clip-path: polygon(0 0, 100% 100%, 75% 100%, 0 0);
+}
+
+.green-wing {
+  position: absolute;
+  bottom: 0;
+  left: 35%;
+  height: 50%;
+  width: 40%;
+  background: #4caf50;
+  clip-path: polygon(75% 0, 100% 0, 0 100%, 0 100%);
+}
+
+.tip {
+  position: absolute;
+  top: 50%;
+  left: 54.5%;
+  transform: translateY(-50%);
+  height: 160px;
+  width: 110px;
+  background: #7d8bb3;
+  clip-path: polygon(0 0, 100% 50%, 0 100%);
+}
