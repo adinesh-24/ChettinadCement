@@ -1,4 +1,3 @@
-/* Existing Styles */
 .products-container {
     padding: 2rem 0;
     background-color: #fff;
@@ -43,16 +42,12 @@
     color: #444;
     padding-left: 5px;
     font-weight: 700;
-    /* Image 2 Sidebar style is simple text. Active state usually bold. */
 }
 
 
-/* Banner Section */
 .product-highlight-banner {
     background-color: #ffe66d;
-    /* Lighter Yellow */
     background: linear-gradient(135deg, #ffef96 0%, #ffe66d 100%);
-    /* Flat yellow is closer to reference than gradient actually. */
     background: #ffe35e;
     border-radius: 4px;
     padding: 3rem 2rem;
@@ -61,10 +56,8 @@
     margin-bottom: 2rem;
 }
 
-/* 3D Tilted Text Logic */
 .highlight-text-wrapper {
     transform: rotate(-6deg) skewX(-6deg);
-    /* Adjust positioning to align right against the image */
     margin-right: -2rem;
     z-index: 2;
     position: relative;
@@ -73,16 +66,12 @@
 .highlight-text-1,
 .highlight-text-2 {
     font-family: 'Impact', 'Anton', sans-serif;
-    /* Thick Condensed Font */
     font-size: 3.5rem;
     font-weight: 900;
-    /* Max weight */
     color: #fff;
     text-transform: uppercase;
     line-height: 0.85;
     margin-bottom: 0;
-    /* Red text shadow to create the 'block' effect */
-    /* text-shadow: x y blur color */
     text-shadow:
         1px 1px 0 #b91c1c,
         2px 2px 0 #b91c1c,
@@ -91,31 +80,25 @@
     letter-spacing: 1px;
 }
 
-/* Ensure secondary text has same style as primary in Image 2 */
-/* Wait, in Image 2 "STRONGER CEMENT" and "DURABLE CONCRETE" look identical style. */
 
 .highlight-bag-image {
     max-width: 100%;
     height: auto;
     max-height: 380px;
     filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.15));
-    /* Soft shadow below bag */
     transition: transform 0.3s ease;
     z-index: 2;
     position: relative;
     transform: rotate(0deg);
 }
 
-/* Maxcrete Logo Badge */
 .maxcrete-logo-badge {
     position: absolute;
     top: 55%;
     right: 0%;
     transform: translateY(-50%);
     background-color: #da291c;
-    /* Strong Red */
     color: #ffe35e;
-    /* Banner Yellow */
     font-family: 'Arial Black', sans-serif;
     font-size: 2.8rem;
     font-weight: 900;
@@ -124,13 +107,10 @@
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     z-index: 10;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    /* Rectangular */
 }
 
-/* Buttons */
 .download-btn-green {
     background-color: #7cbd42;
-    /* Light Green like image */
     color: white;
     border: none;
     padding: 12px 30px;
@@ -139,7 +119,6 @@
     display: inline-flex;
     align-items: center;
     border-radius: 50px;
-    /* Pill shape */
     text-decoration: none;
     font-size: 1.1rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -154,7 +133,6 @@
 
 .download-btn-blue {
     background-color: #0b1c61;
-    /* Navy Blue */
     color: white;
     border: none;
     padding: 12px 30px;
@@ -162,15 +140,12 @@
     display: inline-flex;
     align-items: center;
     border-radius: 4px;
-    /* Rectangular for blue button */
     text-decoration: none;
     font-size: 1rem;
     transition: opacity 0.2s;
     width: 100%;
-    /* Or auto? Image shows it spanning a bit */
     max-width: 350px;
     justify-content: center;
-    /* Center text */
 }
 
 .download-btn-blue:hover {
@@ -178,7 +153,6 @@
     color: white;
 }
 
-/* Lists */
 .section-heading-green {
     font-size: 1.5rem;
     color: #444;
@@ -189,7 +163,6 @@
 
 .section-heading-green span {
     color: #444;
-    /* Plain in image? Or green? Keeping generic. */
 }
 
 .custom-list {
@@ -218,7 +191,6 @@
     background-size: contain;
 }
 
-/* Spinner */
 .spinner-container {
     display: flex;
     justify-content: center;
@@ -246,7 +218,6 @@
     }
 }
 
-/* Responsive */
 @media (max-width: 768px) {
     .highlight-text-wrapper {
         margin-right: 0;
@@ -265,7 +236,6 @@
         right: 0;
         margin-top: 1rem;
         display: inline-block !important;
-        /* Show on mobile below bag */
         transform: none;
     }
 

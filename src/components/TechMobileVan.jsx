@@ -7,14 +7,12 @@ export default function TechMobileVan() {
 
     return (
         <div className="animate-fade-in-up">
-            {/* Header Section */}
             <HeadSection
                 title="Tech Mobile Van"
                 breadcrumbDetails="Tech Mobile Van"
                 imageSrc={bannerImage}
             />
 
-            {/* Blue Section */}
             <div className="container-fluid py-5" style={{ backgroundColor: '#0b1c61', color: 'white' }}>
                 <div className="container">
                     <div className="row align-items-center">
@@ -35,12 +33,7 @@ export default function TechMobileVan() {
                             </p>
                         </div>
                         <div className="col-lg-6 text-center">
-                            {/* Re-using the banner image bus part if possible or the whole thing. 
-                                Since we don't have a separate bus image, we'll use the banner image again 
-                                but it might look repetitive. However, the requirement is to use the provided images.
-                                The prompt provided "chettinad-mobile-bus.png" and "chettinav-service-van...png". 
-                                The first one is the bus+van combo used in banner. I will use it here too.
-                            */}
+                           
                             <img
                                 src={bannerImage}
                                 alt="Mobile Testing Lab Bus"
@@ -52,7 +45,6 @@ export default function TechMobileVan() {
                 </div>
             </div>
 
-            {/* Green Section */}
             <div className="container-fluid py-5" style={{ backgroundColor: '#6cbd45', color: 'white' }}>
                 <div className="container">
                     <div className="row align-items-center">

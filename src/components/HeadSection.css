@@ -1,18 +1,15 @@
-/* Renamed from GetInTouch.css to HeadSection.css */
+
 .head-section-container {
     position: relative;
     width: 100%;
     height: 350px;
     background-color: #f7f9fc;
-    /* Light background */
     overflow: hidden;
     display: flex;
     align-items: center;
 }
 
-/* Background Pattern (Subtle dots/grid if needed, but plain for now based on geometric focus) */
 
-/* Text Section */
 .text-section {
     z-index: 2;
     position: relative;
@@ -48,15 +45,13 @@
     color: #777;
 }
 
-/* Geometric Shapes */
+
 .shape-container {
     position: absolute;
     top: 0;
     right: 25%;
-    /* Adjust based on image */
     bottom: 0;
     width: 400px;
-    /* Adjust width */
     pointer-events: none;
 }
 
@@ -66,13 +61,11 @@
     top: 0;
     bottom: 0;
     left: 35%;
-    /* Mid-ish screen */
     width: 300px;
     height: 100%;
 }
 
 
-/* Decoration Arrows */
 
 .decoration-arrow-top {
     position: absolute;
@@ -81,7 +74,6 @@
     width: 200px;
     height: 50%;
     background-color: #0b1c61;
-    /* Navy */
     transform: skewX(-45deg);
     z-index: 1;
 }
@@ -93,12 +85,10 @@
     width: 200px;
     height: 50%;
     background-color: #5cb85c;
-    /* Green */
     transform: skewX(45deg);
     z-index: 1;
 }
 
-/* Support Image */
 .support-image-container {
     position: absolute;
     right: 5%;
@@ -112,7 +102,6 @@
     object-fit: contain;
 }
 
-/* Background diagonal gray/white split */
 .bg-diagonal {
     position: absolute;
     top: 0;
@@ -120,7 +109,6 @@
     width: 60%;
     height: 100%;
     background: #f4f4f4;
-    /* Slightly darker white */
     clip-path: polygon(25% 0, 100% 0, 100% 100%, 0% 100%);
     z-index: 0;
 }

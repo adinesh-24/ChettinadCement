@@ -1,17 +1,14 @@
 import React from 'react';
 import PlantPageLayout from './PlantPageLayout';
 
-// Puliyur Images
 import puliyur1 from '../assets/plants/tamilnadu/puliyur-1.jpg';
 import puliyur2 from '../assets/plants/tamilnadu/puliyur-2.jpg';
 import puliyur3 from '../assets/plants/tamilnadu/puliyur-3.jpg';
 
-// Karikkali Images
 import karikkali1 from '../assets/plants/tamilnadu/karikkali-1.jpg';
 import karikkali2 from '../assets/plants/tamilnadu/karikkali-2.jpg';
 import karikkali3 from '../assets/plants/tamilnadu/karikkali-3.jpg';
 
-// Ariyalur Images
 import ariyalur1 from '../assets/plants/tamilnadu/ariyalur-1.jpg';
 import ariyalur2 from '../assets/plants/tamilnadu/ariyalur-2.jpg';
 import ariyalur4 from '../assets/plants/tamilnadu/ariyalur-4.jpg';

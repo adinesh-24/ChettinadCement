@@ -6,28 +6,23 @@ import HeadSection from './HeadSection';
 const Products = ({ products }) => {
     const location = useLocation();
 
-    // Default mock logic same as before...
-    const defaultProducts = []; // (Omitted for brevity, data comes from props usually)
+    const defaultProducts = []; 
     const dataToUse = products && products.length > 0 ? products : defaultProducts;
 
-    // Safety check
     if (!dataToUse || dataToUse.length === 0) return <div>No products available</div>;
 
-    // Find active product based on current path, or default to the first one
     const activeProduct = dataToUse.find(p => p.path === location.pathname) || dataToUse[0];
 
     const [loading, setLoading] = useState(false);
 
-    // Effect to trigger loading spinner on route change
     useEffect(() => {
         setLoading(true);
         const timer = setTimeout(() => setLoading(false), 500);
         return () => clearTimeout(timer);
-    }, [location.pathname]); // Re-run when path changes
+    }, [location.pathname]); 
 
     return (
         <div className="products-page-wrapper animate-fade-in-up">
-            {/* 1. Header Section using the shared component */}
             <HeadSection
                 title={activeProduct.title}
                 breadcrumbDetails={`PRODUCTS > ${activeProduct.name}`}
@@ -37,7 +32,6 @@ const Products = ({ products }) => {
             <div className="products-container">
                 <div className="container">
                     <div className="row">
-                        {/* Left Sidebar */}
                         <div className="col-md-3">
                             <div className="products-sidebar">
                                 <h3 className="sidebar-title">Other Products</h3>
@@ -56,7 +50,6 @@ const Products = ({ products }) => {
                             </div>
                         </div>
 
-                        {/* Right Content */}
                         <div className="col-md-9">
                             {loading ? (
                                 <div className="spinner-container">
@@ -65,7 +58,6 @@ const Products = ({ products }) => {
                             ) : (
                                 <div className="product-content">
 
-                                    {/* 2. Banner Image Section */}
                                     <div className="product-highlight-banner p-0 " style={{ background: 'none', border: 'none' }}>
                                         {activeProduct.bannerImg ? (
                                             <img
@@ -74,19 +66,16 @@ const Products = ({ products }) => {
                                                 className="w-100 h-auto rounded"
                                             />
                                         ) : (
-                                            /* Fallback if no banner image exists, purely for layout stability */
                                             <div className="bg-light p-5 text-center">
                                                 <img src={activeProduct.img} alt={activeProduct.name} style={{ maxHeight: '200px' }} />
                                             </div>
                                         )}
                                     </div>
 
-                                    {/* Description (Moved Text here if needed, or keep below) */}
                                     <div className="product-description-text mt-1 mb-4">
                                         {activeProduct.description}
                                     </div>
 
-                                    {/* Buttons Container */}
                                     <div className="d-flex flex-column align-items-start gap-3 mb-5">
                                         <a href="#" className="download-btn-green">
                                             <span className="me-2 fs-4">↓</span>
@@ -96,7 +85,6 @@ const Products = ({ products }) => {
 
                                     <hr className="my-5" style={{ opacity: 0.1 }} />
 
-                                    {/* Advantages & Applications */}
                                     {activeProduct.advantages && (
                                         <div className="mb-5">
                                             <h3 className="section-heading-green">{activeProduct.name.split(' ')[0]} <span>Advantages</span></h3>
@@ -106,7 +94,6 @@ const Products = ({ products }) => {
                                                 ))}
                                             </ul>
 
-                                            {/* Product Diagram Image */}
                                             {activeProduct.img && (
                                                 <div className="mt-4 text-center">
                                                     <img

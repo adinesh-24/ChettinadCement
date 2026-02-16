@@ -3,7 +3,6 @@
   min-height: 350px;
 }
 
-/* BLUE DIAGONAL */
 .contact-banner::before {
   content: "";
   position: absolute;
@@ -15,7 +14,6 @@
   left: 30%;
 }
 
-/* GREEN DIAGONAL */
 .contact-banner::after {
   content: "";
   position: absolute;

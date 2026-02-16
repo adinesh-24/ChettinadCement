@@ -3,14 +3,9 @@ import HeadSection from "./HeadSection";
 import { FaPlus, FaMinus } from "react-icons/fa";
 
 export default function Resources() {
-    // Banner image placeholder or a generic one if not provided. 
-    // Using a relevant Chettinad banner if available, otherwise blank or reusing one.
-    // The screenshot shows a specific "construction workers with question mark" banner. 
-    // Since I don't have the URL, I'll use a placeholder or reuse one for now.
-    // I will use a high quality concrete/construction image as a placeholder.
+   
     const bannerImage = "https://www.chettinadcement.com/wp-content/uploads/2024/08/faq-banner2.jpg";
 
-    // FAQ Data
     const faqData = [
         {
             question: "What is Chettinad Cement?",
@@ -42,7 +37,6 @@ export default function Resources() {
         }
     ];
 
-    // State to track which FAQ is open
     const [openIndex, setOpenIndex] = useState(null);
 
     const toggleFAQ = (index) => {
@@ -104,7 +98,6 @@ export default function Resources() {
                     </div>
                 </div>
             </div>
-            {/* Adding WhatsApp widget if implied globally or just keeping page clean */}
         </div>
     );
 }

@@ -10,8 +10,8 @@ import Blogs from './components/Blogs.jsx';
 import GetInTouch from './components/GetInTouch.jsx';
 
 
-import Resources from './components/Resources.jsx';
-import Services from './components/Services.jsx';
+import Resources from './components/resources.jsx';
+import Services from './components/services.jsx';
 import TechMobileVan from './components/TechMobileVan.jsx';
 
 import Navbar from './components/Navbar.jsx';
@@ -55,9 +55,7 @@ export default function App() {
         <Route path="/blogs" element={<Blogs />} />
         <Route path="/getintouch" element={<GetInTouch />} />
 
-        {/* Product Routes pointing to specific components */}
         <Route path="/products" element={<MaxcretePremiumPPC />} />
-        {/* /products default to maxcrete for now or can be a landing page. Using Maxcrete as it was before effectively */}
 
         <Route path="/maxcrete-premium-ppc" element={<MaxcretePremiumPPC />} />
         <Route path="/super-grade-ppc" element={<SuperGradePPC />} />

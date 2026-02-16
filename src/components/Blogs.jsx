@@ -5,7 +5,7 @@ import { FaUser, FaComment, FaClock, FaSearch } from "react-icons/fa";
 export default function Blogs() {
     const bannerImage = "https://www.chettinadcement.com/wp-content/uploads/2024/08/abstract-1-1.jpg";
 
-    // Images provided by user
+   
     const postImage1 = "https://www.chettinadcement.com/wp-content/uploads/2026/01/best_cement_for_concrete-1.jpg";
     const postImage2 = "https://www.chettinadcement.com/wp-content/uploads/2025/12/wholesale-cement-near-me.jpg";
     const postImage3 = "https://www.chettinadcement.com/wp-content/uploads/2024/10/new-construction.jpg"; // Assuming this is the third one
@@ -35,10 +35,10 @@ export default function Blogs() {
             date: "December 18, 2025",
             image: postImage2
         },
-        { // Adding a third one based on the third image URL provided
+        { 
             id: 3,
             title: "Essential Tips for New Construction Projects",
-            date: "October 15, 2024", // Date inferred/made up relative to filename
+            date: "October 15, 2024", 
             image: postImage3
         }
     ];
@@ -59,7 +59,6 @@ export default function Blogs() {
 
             <div className="container py-5">
                 <div className="row">
-                    {/* Left Column: Blog Posts */}
                     <div className="col-lg-8">
                         {blogPosts.map(post => (
                             <div key={post.id} className="card shadow-sm border-0 mb-5">
@@ -98,9 +97,7 @@ export default function Blogs() {
                         ))}
                     </div>
 
-                    {/* Right Column: Sidebar */}
                     <div className="col-lg-4 ps-lg-5">
-                        {/* Search Widget */}
                         <div className="mb-5">
                             <h4 className="fw-bold mb-4" style={{ color: '#0b1c61' }}>Search</h4>
                             <div className="input-group">
@@ -111,7 +108,6 @@ export default function Blogs() {
                             </div>
                         </div>
 
-                        {/* Categories Widget */}
                         <div className="mb-5">
                             <h4 className="fw-bold mb-4" style={{ color: '#0b1c61' }}>Categories</h4>
                             <ul className="list-group list-group-flush">
@@ -124,7 +120,6 @@ export default function Blogs() {
                             </ul>
                         </div>
 
-                        {/* Recent Posts Widget */}
                         <div className="mb-5">
                             <h4 className="fw-bold mb-4" style={{ color: '#0b1c61' }}>Recent Posts</h4>
                             <div className="d-flex flex-column gap-4">

@@ -5,17 +5,14 @@ import visionImage from '../assets/vision.png';
 export default function VisionMission() {
     return (
         <div className="animate-fade-in-up">
-            {/* Header Section */}
             <HeadSection
                 title="Vision & Mission"
                 breadcrumbDetails="Vision & Mission"
-                imageSrc="" // Removed header image
+                imageSrc="" 
             />
 
-            {/* Content Section */}
             <div className="container py-5">
                 <div className="row align-items-center">
-                    {/* Left Column: Text */}
                     <div className="col-lg-6 mb-4 mb-lg-0">
                         <h2 style={{ color: "#001f7d", fontWeight: "bold", marginBottom: "20px" }}>
                             Our Vision
@@ -25,7 +22,6 @@ export default function VisionMission() {
                         </p>
                     </div>
 
-                    {/* Right Column: Image */}
                     <div className="col-lg-6 text-center">
                         <img
                             src={visionImage}

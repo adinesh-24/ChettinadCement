@@ -3,21 +3,17 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-// 1) Import the video file
 import videobg from "../assets/cementvideo.mp4";
 
-// 2) Import the images 
 import fogoverlay from "../assets/cementfog.jpeg";
 import finalcement from "../assets/finalcement.jpg";
 
-// 4) NEW SECTION IMAGES
 import factoryView from "../assets/factory_view.png";
 import qualityIcon from "../assets/quality_assurance.png";
 import envIcon from "../assets/environmental_commitment.png";
 import innovIcon from "../assets/innovative_manufacturing.png";
 import customerIcon from "../assets/customer_centric.png";
 
-// 3) CLIENT LOGOS - placeholders
 import client1 from "../assets/clients/client1.png";
 import client2 from "../assets/clients/client2.png";
 import client3 from "../assets/clients/client3.png";
@@ -26,7 +22,6 @@ import client5 from "../assets/clients/client5.png";
 import client6 from "../assets/clients/client6.png";
 import client7 from "../assets/clients/client7.png";
 
-// Client Logos Arrays
 const row1Clients = [
     "https://www.chettinadcement.com/wp-content/uploads/2024/07/1.jpg",
     "https://www.chettinadcement.com/wp-content/uploads/2024/07/2.jpg",
@@ -72,24 +67,20 @@ const row2Clients = [
 ];
 
 export default function Home() {
-    // STAGE MANAGEMENT: "video" -> "fog" -> "final"
     const [stage, setStage] = useState("video");
 
-    // Effect to handle the fog transition
     useEffect(() => {
         if (stage === "fog") {
             const timer = setTimeout(() => {
                 setStage("final");
-            }, 3000); // Show fog for 3 seconds
+            }, 3000); 
             return () => clearTimeout(timer);
         }
     }, [stage]);
 
-    // Counter Hook (Simple implementation)
     const useCounter = (end, duration = 2000) => {
         const [count, setCount] = useState(0);
         useEffect(() => {
-            // Start animation immediately on mount
             let start = 0;
             const increment = end / (duration / 16);
             const timer = setInterval(() => {
@@ -112,12 +103,9 @@ export default function Home() {
 
     return (
         <div style={{ width: "100%", overflowX: "hidden" }} className="animate-fade-in-up">
-            {/* HERO SECTION - Adjusted height to be more impactful */}
             <div style={{ width: "100%", height: "85vh", position: "relative", overflow: "hidden", backgroundColor: '#000' }}>
 
-                {/* STEP 1 — VIDEO */}
                 <div style={{ position: 'absolute', inset: 0, opacity: stage === 'video' ? 1 : 0, transition: 'opacity 1s ease-in-out' }}>
-                    {/* Only render video if we are in video stage or transitioning out to prevent black flash */}
                     <video
                         src={videobg}
                         autoPlay
@@ -128,7 +116,6 @@ export default function Home() {
                     />
                 </div>
 
-                {/* STEP 2 — FOG IMAGE */}
                 <div style={{ position: 'absolute', inset: 0, opacity: stage === 'fog' ? 1 : 0, transition: 'opacity 1s ease-in-out', pointerEvents: 'none' }}>
                     <img
                         src={fogoverlay}
@@ -137,7 +124,6 @@ export default function Home() {
                     />
                 </div>
 
-                {/* STEP 3 — FINAL IMAGE */}
                 <div style={{ position: 'absolute', inset: 0, opacity: stage === 'final' ? 1 : 0, transition: 'opacity 1s ease-in-out' }}>
                     <img
                         src={finalcement}
@@ -146,16 +132,14 @@ export default function Home() {
                     />
                 </div>
 
-                {/* STATS OVERLAY - Always Visible & Animated on Load */}
                 <div style={{
                     position: 'absolute',
                     bottom: 0,
                     left: 0,
                     width: '100%',
-                    backgroundColor: 'rgba(10, 31, 121, 0.95)', // Deep Blue with slight transparency
-                    color: 'white',
+                    backgroundColor: 'rgba(10, 31, 121, 0.95)', 
                     padding: '20px 0',
-                    zIndex: 10 // Ensure it stays on top of all media layers
+                    zIndex: 10 
                 }} className="animate-fade-in-up">
                     <div className="container">
                         <div className="row text-center align-items-center">
@@ -181,12 +165,10 @@ export default function Home() {
             </div>
 
 
-            {/* YOUR PARTNER IN SUCCESS SECTION */}
             <div style={{ backgroundColor: "#fff", padding: "80px 0" }}>
                 <div className="container">
                     <div className="row align-items-center mb-5">
                         <div className="col-lg-6 mb-4 mb-lg-0">
-                            {/* This image is from the first link provided: Compressed_Picture_Under_2MB.png */}
                             <img
                                 src={factoryView}
                                 alt="Chettinad Factory"
@@ -212,7 +194,6 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* WHY CHETTINAD CEMENT SECTION - Title Banner */}
             <div style={{ backgroundColor: "#0a1f79", padding: "50px 0" }}>
                 <div className="container">
                     <h2 className="text-center fw-bold m-0 text-white" style={{ fontSize: "2.5rem" }}>
@@ -221,11 +202,9 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* WHY CHETTINAD CEMENT SECTION - Cards */}
             <div style={{ backgroundColor: "#fff", padding: "80px 0" }}>
                 <div className="container">
                     <div className="row g-4">
-                        {/* Card 1: Quality Assurance */}
                         <div className="col-md-3">
                             <div className="card h-100 border-0 text-center p-4 shadow-sm" style={{ borderRadius: '15px', backgroundColor: '#fff' }}>
                                 <div className="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style={{ width: '80px', height: '80px', padding: '15px' }}>
@@ -238,7 +217,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Card 2: Environmental Commitment */}
                         <div className="col-md-3">
                             <div className="card h-100 border-0 text-center p-4 shadow-sm" style={{ borderRadius: '15px', backgroundColor: '#fff' }}>
                                 <div className="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style={{ width: '80px', height: '80px', padding: '15px' }}>
@@ -251,7 +229,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Card 3: Innovative Manufacturing */}
                         <div className="col-md-3">
                             <div className="card h-100 border-0 text-center p-4 shadow-sm" style={{ borderRadius: '15px', backgroundColor: '#fff' }}>
                                 <div className="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style={{ width: '80px', height: '80px', padding: '15px' }}>
@@ -264,7 +241,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Card 4: Customer-Centric Approach */}
                         <div className="col-md-3">
                             <div className="card h-100 border-0 text-center p-4 shadow-sm" style={{ borderRadius: '15px', backgroundColor: '#fff' }}>
                                 <div className="rounded-circle bg-light d-flex align-items-center justify-content-center mx-auto mb-3" style={{ width: '80px', height: '80px', padding: '15px' }}>
@@ -284,9 +260,7 @@ export default function Home() {
 
 
 
-            {/* BUILDING EXCELLENCE VIDEO SECTION (NEW) */}
             <div style={{ width: "100%", height: "85vh", position: "relative", overflow: "hidden", backgroundColor: '#000' }}>
-                {/* BUILDING EXCELLENCE HEADER - Overlay at top */}
                 <div style={{
                     position: 'absolute',
                     top: 0,
@@ -313,16 +287,15 @@ export default function Home() {
                     />
                 </div>
 
-                {/* STATS OVERLAY - Duplicated for this section */}
                 <div style={{
                     position: 'absolute',
                     bottom: 0,
                     left: 0,
                     width: '100%',
-                    backgroundColor: 'rgba(10, 31, 121, 0.95)', // Deep Blue with slight transparency
+                    backgroundColor: 'rgba(10, 31, 121, 0.95)', 
                     color: 'white',
                     padding: '20px 0',
-                    zIndex: 10 // Ensure it stays on top of all media layers
+                    zIndex: 10 
                 }} className="animate-fade-in-up">
                     <div className="container">
                         <div className="row text-center align-items-center">
@@ -348,7 +321,6 @@ export default function Home() {
             </div>
 
 
-            {/* TESTIMONIALS SECTION */}
             <div style={{ backgroundColor: "#f8f9fa", padding: "80px 0" }}>
                 <div className="container">
                     <div className="text-center mb-5">
@@ -375,7 +347,6 @@ export default function Home() {
                             }
                         ]}
                     >
-                        {/* Testimonial 1 */}
                         <div className="p-3">
                             <div className="card border-0 shadow-sm p-4 h-100" style={{ borderRadius: "10px" }}>
                                 <div className="d-flex align-items-center mb-3">
@@ -393,7 +364,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Testimonial 2 */}
                         <div className="p-3">
                             <div className="card border-0 shadow-sm p-4 h-100" style={{ borderRadius: "10px" }}>
                                 <div className="d-flex align-items-center mb-3">
@@ -411,7 +381,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Testimonial 3 (Duplicate for sliding effect) */}
                         <div className="p-3">
                             <div className="card border-0 shadow-sm p-4 h-100" style={{ borderRadius: "10px" }}>
                                 <div className="d-flex align-items-center mb-3">
@@ -432,9 +401,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* LATEST NEWS & BLOG SECTION */}
             <div style={{ paddingBottom: "50px" }}>
-                {/* Header */}
                 <div style={{ backgroundColor: "#0a1f79", padding: "40px 0", marginBottom: "50px" }}>
                     <div className="container text-center">
                         <h2 className="fw-bold m-0" style={{ fontSize: "2.5rem", color: "white" }}>
@@ -443,10 +410,8 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Blog Cards */}
                 <div className="container">
                     <div className="row g-4">
-                        {/* Blog Card 1 */}
                         <div className="col-md-4">
                             <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ backgroundColor: "#0a1f79", borderRadius: "10px" }}>
                                 <img
@@ -466,7 +431,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Blog Card 2 */}
                         <div className="col-md-4">
                             <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ backgroundColor: "#0a1f79", borderRadius: "10px" }}>
                                 <img
@@ -486,7 +450,6 @@ export default function Home() {
                             </div>
                         </div>
 
-                        {/* Blog Card 3 */}
                         <div className="col-md-4">
                             <div className="card h-100 border-0 shadow-sm overflow-hidden" style={{ backgroundColor: "#0a1f79", borderRadius: "10px" }}>
                                 <img
@@ -508,7 +471,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            {/* CLIENTS MARQUEE SECTION */}
             <div style={{ backgroundColor: "#ffffff", paddingBottom: "50px", overflow: 'hidden' }}>
                 <div style={{ backgroundColor: "#0a1f79", padding: "40px 0", marginBottom: "50px", width: "100%" }}>
                     <div className="container text-center">
@@ -518,7 +480,6 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Row 1 - Left Scroll */}
                 <div className="marquee-container mb-4">
                     <div className="marquee-content left-scroll">
                         {[...row1Clients, ...row1Clients].map((src, index) => (
@@ -533,7 +494,6 @@ export default function Home() {
                     </div>
                 </div>
 
-                {/* Row 2 - Right Scroll */}
                 <div className="marquee-container mb-5">
                     <div className="marquee-content right-scroll">
                         {[...row2Clients, ...row2Clients].map((src, index) => (

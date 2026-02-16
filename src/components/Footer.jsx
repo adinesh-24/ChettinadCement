@@ -4,13 +4,11 @@ export default function Footer() {
   return (
     <footer>
 
-      {/* TOP BLUE SECTION */}
       <div style={{ backgroundColor: "#162a7c" }} className="text-white pt-5 pb-4">
 
         <div className="container">
           <div className="row gy-4">
 
-            {/* LEFT COLUMN */}
             <div className="col-lg-4">
 
               <img src="https://www.chettinadcement.com/wp-content/uploads/2024/07/Chettinad-footer-logo-2.png" alt="logo" style={{ height: "60px" }} />
@@ -37,7 +35,6 @@ export default function Footer() {
 
             </div>
 
-            {/* PRODUCTS */}
             <div className="col-lg-3">
               <h5 className="text-success mb-3">Products</h5>
 
@@ -52,7 +49,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* MANUFACTURING PLANTS */}
             <div className="col-lg-3">
               <h5 className="text-success mb-3">Manufacturing Plants</h5>
 
@@ -65,7 +61,6 @@ export default function Footer() {
               </ul>
             </div>
 
-            {/* IMPORTANT LINKS */}
             <div className="col-lg-2">
               <h5 className="text-success mb-3">Important Links</h5>
 
@@ -84,10 +79,8 @@ export default function Footer() {
 
       </div>
 
-      {/* BOTTOM GREEN SECTION */}
       <div style={{ backgroundColor: "#63b545" }} className="text-center text-white py-4">
 
-        {/* Social Icons */}
         <div className="mb-3">
 
           <i className="bi bi-facebook mx-2 fs-4"></i>

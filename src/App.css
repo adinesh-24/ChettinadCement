@@ -30,7 +30,6 @@
     animation-play-state: paused;
 }
 
-/* Navbar Dropdown Styles */
 .dropdown-container {
     position: relative;
 }
@@ -38,7 +37,6 @@
 .dropdown-arrow {
     font-size: 0.6em;
     color: #28a745;
-    /* Green color match */
     transition: transform 0.3s ease;
 }
 
@@ -50,7 +48,6 @@
     left: 50%;
     transform: translateX(-50%) translateY(10px);
     background-color: #ffffff;
-    /* White background */
     padding: 10px 0;
     list-style: none;
     border-radius: 4px;
@@ -83,26 +80,19 @@
     display: block;
     padding: 8px 20px;
     color: #0A1F79;
-    /* Deep blue text */
     text-decoration: none;
     font-size: 0.85rem;
-    /* Reduced size */
     transition: background-color 0.2s, color 0.2s;
     white-space: nowrap;
-    /* Ensure single line */
 }
 
 .dropdown-item-custom:hover {
     background-color: #f8f9fa;
-    /* Light hover bg */
     color: #28a745;
-    /* Green text on hover */
 }
 
-/* Contact Page Styles */
 .btn-contact-submit {
     background-color: #212529;
-    /* Dark default */
     color: white;
     transition: background-color 0.3s ease, transform 0.2s ease;
     border: none;
@@ -110,7 +100,6 @@
 
 .btn-contact-submit:hover {
     background-color: #28a745 !important;
-    /* Green on hover */
     transform: translateY(-2px);
 }
 
@@ -130,7 +119,6 @@
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Get In Touch Button */
 .btn-get-in-touch {
     background-color: #0a1f79;
     color: white;

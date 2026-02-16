@@ -6,7 +6,6 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-lg bg-light py-3">
       <div className="container">
 
-        {/* Logo */}
         <NavLink className="navbar-brand fw-bold d-flex align-items-center" to="/">
           <img
             src={logo}
@@ -15,7 +14,6 @@ export default function Navbar() {
           />
         </NavLink>
 
-        {/* Mobile Toggle Button */}
         <button
           className="navbar-toggler"
           type="button"
@@ -25,12 +23,10 @@ export default function Navbar() {
           <span className="navbar-toggler-icon"></span>
         </button>
 
-        {/* Menu */}
         <div className="collapse navbar-collapse" id="navbarContent">
 
           <ul className="navbar-nav mx-auto gap-lg-4 text-center">
 
-            {/* About Dropdown */}
             <li className="nav-item dropdown-container">
               <div className="nav-link d-flex align-items-center gap-1" style={{ cursor: 'pointer' }}>
                 About
@@ -41,7 +37,6 @@ export default function Navbar() {
               </ul>
             </li>
 
-            {/* Plants Dropdown */}
             <li className="nav-item dropdown-container">
               <div className="nav-link d-flex align-items-center gap-1" style={{ cursor: 'pointer' }}>
                 Plants
@@ -56,7 +51,6 @@ export default function Navbar() {
               </ul>
             </li>
 
-            {/* Products Dropdown */}
             <li className="nav-item dropdown-container">
               <div className="nav-link d-flex align-items-center gap-1" style={{ cursor: 'pointer' }}>
                 Products
@@ -73,7 +67,6 @@ export default function Navbar() {
               </ul>
             </li>
 
-            {/* Services Dropdown */}
             <li className="nav-item dropdown-container">
               <div className="nav-link d-flex align-items-center gap-1" style={{ cursor: 'pointer' }}>
                 Services
@@ -84,7 +77,6 @@ export default function Navbar() {
               </ul>
             </li>
 
-            {/* Resources Dropdown */}
             <li className="nav-item dropdown-container">
               <div className="nav-link d-flex align-items-center gap-1" style={{ cursor: 'pointer' }}>
                 Resources

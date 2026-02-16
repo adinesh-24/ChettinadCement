@@ -9,7 +9,6 @@ const PlantPageLayout = ({ stateName, plants, headImage }) => {
 
     const breadcrumbDetails = stateName;
 
-    // Define all locations with their specific link text
     const allLocations = [
         {
             name: "Tamil Nadu",
@@ -38,7 +37,6 @@ const PlantPageLayout = ({ stateName, plants, headImage }) => {
         }
     ];
 
-    // Filter out the current state
     const otherLocations = allLocations.filter(loc => loc.name !== stateName);
 
     return (
